@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Proyectos en:
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,44 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+
+
+
+  <ion-list *ngIf="skillListExperience.length > 0">
+    <ion-card *ngFor="let skill of skillListExperience">
+
+      <ion-card-title class="ion-text-center">
+        {{skill.exp_proyecto}}
+      </ion-card-title>
+      <ion-card-content (click)="openModal()">
+        <img [src]="skill.exp_url_img" />
+      </ion-card-content>
+      
+      <ion-card-content>
+
+        TAGS:
+        <ion-chip>
+          <ion-icon name="heart" color="dark"></ion-icon>
+          <ion-label>{{skill.exp_tags}}</ion-label>
+        </ion-chip><br>
+        DE TIPO:
+        <ion-chip>
+          <ion-icon name="heart" color="dark"></ion-icon>
+          <ion-label>{{skill.exp_tipo}}</ion-label>
+        </ion-chip>
+        <ion-chip *ngIf="skill.exp_tipoll">
+          <ion-icon name="heart" color="dark"></ion-icon>
+          <ion-label>{{skill.exp_tipoll}}</ion-label>
+        </ion-chip>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-button routerLink="/tabs/tab3" expand="block" fill="clear" shape="round">
+    Home
+  </ion-button>
+  <ion-button routerLink="/tabs/tab3" expand="block" fill="clear" shape="round">
+    Contactarme
+  </ion-button>
+
 </ion-content>

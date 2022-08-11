@@ -1,17 +1,155 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title color="primary">
+        Datos personales
+      </ion-title>
     </ion-toolbar>
   </ion-header>
+<ion-content [fullscreen]="true">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <ion-content>
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Datos personales</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <h1>Slide 1</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 2</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 3</h1>
+      </ion-slide>
+    </ion-slides>
+
+    <ion-card>
+
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="../assets/img/perfil.jpg ">
+          </ion-thumbnail>
+          <ion-label>
+            <h1>Erick Santiago</h1>
+            <h1>Bolanos Vinueza</h1>
+            <h2>Software Developer</h2>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-card>
+        <ion-card-content>
+          Soy una persona innovadora, puntual y responsable con las tareas asignadas y actitud positiva.
+          Me motiva mucho desarrollar mis habilidades y crecer profesionalmente. Tengo confianza en mi capacidad para
+          encontrar ideas interesantes y asi adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en
+          cualquier
+          proyecto, al mismo tiempo que me esfuerzo por trabajar en equipo y fomentar valores como los del
+          compañerismo🤖.
+        </ion-card-content>
+      </ion-card>
+      <ion-button routerLink="/tabs/tab3" expand="block" fill="clear" shape="round">
+        Contactarme
+      </ion-button>
+      <ion-item>
+        <ion-label>Edad</ion-label>
+        <ion-badge slot="end">23</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Estado civil</ion-label>
+        <ion-badge slot="end">Soltero</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Ciudadanía</ion-label>
+        <ion-badge slot="end">Ecuatoriano</ion-badge>
+      </ion-item>
+
+    </ion-card>
+
+    <ion-label>
+      Estudios
+    </ion-label>
+    <ion-card>
+      <ion-list>
+        <ion-item>
+          <ion-icon style="font-size: 30px; padding: 7px;" name="school-outline" color="primary"></ion-icon>
+          <ion-label>
+            <ion-label color="dark">2011 - 2017</ion-label>
+            <ion-label color="dark">Bachiller en Ciencias</ion-label>
+            <ion-label color="medium" class="ion-text-wrap"> Unidad Educativa "Las Lomas-UELL"</ion-label>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon style="font-size: 30px; padding: 7px;" name="school-outline" color="primary"></ion-icon>
+          <ion-label>
+            <ion-label color="dark">2018 - 2022</ion-label>
+            <ion-label color="dark" class="ion-text-wrap">Ingenieria en Software</ion-label>
+            <ion-label color="medium" class="ion-text-wrap"> Universidad Tecnica del Norte "UTN"</ion-label>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+
+    <ion-label>
+      Redes Sociales
+    </ion-label>
+
+    <ion-card>
+      <ion-list>
+        <ion-item href="https://www.instagram.com/sant_bolanoss/">
+          <ion-icon style="font-size: 30px; padding: 7px;" name="logo-instagram" color="primary"></ion-icon>
+          <ion-label>
+            <ion-label color="dark">sant_bolanoss</ion-label>
+          </ion-label>
+        </ion-item>
+
+        <ion-item href="https://www.facebook.com/santiago.bolanos.733">
+          <ion-icon style="font-size: 30px; padding: 7px;" name="logo-facebook" color="primary"></ion-icon>
+          <ion-label>
+            <ion-label color="dark" class="ion-text-wrap">Santiago Bolanos</ion-label>
+          </ion-label>
+        </ion-item>
+
+        <ion-item href="https://twitter.com/ESantiagoBolaos?s=09">
+          <ion-icon style="font-size: 30px; padding: 7px;" name="logo-twitter" color="primary"></ion-icon>
+          <ion-label>
+            <ion-label color="dark">@ESantiagoBolaos</ion-label>
+          </ion-label>
+        </ion-item>
+
+        <ion-item href="https://www.snapchat.com/add/sbolanos94?share_id=D7-h6frtzZk&locale=en-EC">
+          <ion-icon style="font-size: 30px; padding: 7px;" name="logo-snapchat" color="primary"></ion-icon>
+          <ion-label>
+            <ion-label color="dark">sbolanos94</ion-label>
+          </ion-label>
+        </ion-item>
+       
+      </ion-list>
+      <ion-toolbar>
+        <ion-title color="primary" size="large">Habilidades en:</ion-title>
+      </ion-toolbar>
+    </ion-card>
+    <ion-list *ngIf="skillList.length > 0">
+      <ion-card *ngFor="let skill of skillList">
+        <ion-item>
+          <ion-card-title>
+            {{skill.hab_nombre}}
+          </ion-card-title>
+        </ion-item>
+        <ion-item>
+          <img [src]="skill.hab_url_img" />
+        </ion-item>
+      </ion-card>
+    </ion-list>
+
+   
+
+    <br><br><br>
+
+  </ion-content>

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Comuniquese con:
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,38 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-list>
+    <ion-item>
+      <ion-icon style="font-size: 30px; padding: 7px;" name="call-outline" color="primary"></ion-icon>
+      <ion-label>
+        <ion-label color="dark">Teléfono</ion-label>
+        <ion-label color="medium" class="ion-text-wrap">0994798739</ion-label>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon style="font-size: 30px; padding: 7px;" name="location-outline" color="primary"></ion-icon>
+      <ion-label>
+        <ion-label color="dark">Dirección</ion-label>
+        <ion-label color="medium" class="ion-text-wrap"> San Roque-Atuntaqui, Garcia Moreno y 29 de Septiembre
+        </ion-label>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon style="font-size: 30px; padding: 7px;" name="mail-outline" color="primary"></ion-icon>
+      <ion-label>
+        <ion-label color="dark">Correo electrónico</ion-label>
+        <ion-label color="medium" class="ion-text-wrap"> esbolanosv@utn.edu.ec</ion-label>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  
+
+
+  <ion-button routerLink="/tabs/tab1" expand="block" fill="clear" shape="round">
+    Ir a Inicio
+  </ion-button>
+
+
 </ion-content>
